@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date()
+var h=today.getHours()
+var m=today.getMinutes()
+var s=today.getSeconds()
+
+var d=new Date()
+var weekday=new Array(7)
+
+m=checkTime(m)
+s=checkTime(s)
+weekday[0]="Sunday"
+weekday[1]="Monday"
+weekday[2]="Tuesday"
+weekday[3]="Wednesday"
+weekday[4]="Thursday"
+weekday[5]="Friday"
+weekday[6]="Saturday"
+document.getElementById('txt').innerHTML=d.getFullYear()+"年"+d.getMonth()+"月"+d.getDate()+"日 "+weekday[d.getDay()]+" "+h+":"+m+":"+s
+t=setTimeout('startTime()',500)
+}
+
+function checkTime(i)
+{
+if (i<10) 
+  {i="0" + i}
+  return i
+}
+</script>
+</head>
+
+<body onload="startTime()">
+<div id="txt"></div>
+</body>
+</html>

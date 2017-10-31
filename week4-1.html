@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+div{
+    border:5px solid black;
+    opacity:0.3;
+    margin:30px;
+    width:250px;
+    height:120px;
+    background-color:yellow
+</style>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" >
+</div>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" >
+</div>
+
+<script type="text/javascript">
+function mOver(obj)
+{
+obj.style.backgroundColor='red';
+obj.style.opacity='1';
+}
+
+function mOut(obj)
+{
+obj.style.backgroundColor='yellow';
+obj.style.opacity='0.3';
+}
+</script>
+
+</body>
+</html>
